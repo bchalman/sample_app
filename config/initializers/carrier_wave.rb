@@ -1,7 +1,7 @@
 if Rails.env.production?
   CarrierWave.configure do |config|
     # config.fog_provider = 'fog/aws'
-    config.storage = :fog
+    # config.storage = :fog
     config.delete_tmp_file_after_storage = false
     config.fog_credentials = {
       # Configuration for Amazon S3
