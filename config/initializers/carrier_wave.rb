@@ -2,7 +2,7 @@ if Rails.env.production?
   CarrierWave.configure do |config|
     # config.fog_provider = 'fog/aws'
     # config.storage = :fog
-    config.delete_tmp_file_after_storage = false
+    # config.delete_tmp_file_after_storage = false
     config.fog_credentials = {
       # Configuration for Amazon S3
       :provider              => 'AWS',
@@ -11,6 +11,5 @@ if Rails.env.production?
       :region                => ENV['S3_REGION']
     }
     config.fog_directory     =  ENV['S3_BUCKET']
-    config.fog_public        =  true
   end
 end
